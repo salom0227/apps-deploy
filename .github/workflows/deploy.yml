@@ -20,8 +20,8 @@ jobs:
           username: ${{ secrets.SERVER_USER }}
           key: ${{ secrets.SSH_KEY }}
           script: |
-  cd ~/apps
-  git pull origin main
-  docker-compose down
-  docker-compose up -d --build
+            cd ~/apps
+            git pull origin main
+            docker-compose down
+            docker-compose up -d --build
 
