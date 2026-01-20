@@ -1,5 +1,12 @@
 const http = require('http');
 
 http.createServer((req, res) => {
-  res.end("CI/CD WORKING 🔥 " + new Date());
+  if (req.url === '/health') {
+    res.writeHead(200);
+    res.end('OK');
+    return;
+  }
+
+  res.end('Node.js is running 🚀 ' + new Date());
 }).listen(3000);
+
