@@ -1,5 +1,5 @@
 const http = require('http');
 
 http.createServer((req, res) => {
-  res.end("Node.js is running 🚀");
+  res.end("CI/CD WORKING 🔥 " + new Date());
 }).listen(3000);
